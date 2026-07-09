@@ -8,14 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
     ambiente:
       "https://forms.gle/t72XgVAXNdoLGguc6",
 
+    animales:
+      "otra-voz.html",
+
     seguridad:
       "https://forms.gle/Xdf5kkhEWLjADTtC8",
 
+    mujeres:
+      "savewomans.html",
+
     propuestas:
-      "https://wa.me/573236815265?text=Hola,%20tengo%20una%20idea%20para%20Bogotá",
+      null,
 
     comunidad:
-      "",
+      "https://wa.me/573236815265?text=Hola,%20tengo%20una%20idea%20para%20Bogotá",
 
     secop:
       null
@@ -23,9 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 
-
   const cards = document.querySelectorAll(".card");
-
 
 
   cards.forEach(card => {
@@ -36,20 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const url = links[key];
 
+      if (url) {
 
+        window.open(url, "_blank");
 
-      if(url){
+      } else {
 
-        window.open(
-          url,
-          "_blank"
-        );
-
-      }
-
-      else{
-
-        showModal();
+        showModal(key);
 
       }
 
@@ -58,23 +55,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+  function showModal(section) {
 
-  function showModal(){
+    switch (section) {
 
-    alert(
+      case "secop":
 
-`🔎 Transparencia
+        alert(`🔎 Transparencia
 
 Próximamente encontrarás:
 
-✓ Scrapling para los contratos del  SECOP2
+✓ Consulta de contratos públicos.
 
-✓ Herramientas de vigilancia ciudadana para verificar posibles casos de corrupcion 
+✓ Herramientas de vigilancia ciudadana.
 
-✓ Datos e indicadores`
+✓ Indicadores y datos abiertos para fortalecer el control social.`);
 
-    );
+        break;
+
+      case "comunidad":
+
+        alert(`👥 Red Ciudadana Bogotá
+
+Estamos construyendo una comunidad para conectar ciudadanos comprometidos con Bogotá.
+
+Próximamente podrás:
+
+✓ Unirte a la red.
+✓ Participar en iniciativas.
+✓ Recibir convocatorias y novedades.`);
+
+        break;
+
+      default:
+
+        alert("Esta sección estará disponible próximamente.");
+
+    }
 
   }
 
 });
+
