@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
       "savewomans.html",
 
     propuestas:
-      null,
+      "https://wa.me/573107768773?text=Hola,%20tengo%20una%20idea%20para%20Bogotá",
 
     comunidad:
-      "https://wa.me/573236815265?text=Hola,%20tengo%20una%20idea%20para%20Bogotá",
+      ,
 
     secop:
       null
