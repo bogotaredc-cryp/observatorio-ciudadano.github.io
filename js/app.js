@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "https://wa.me/573107768773?text=Hola,%20tengo%20una%20idea%20para%20Bogotá",
 
     comunidad:
-      ,
+      "https://chat.whatsapp.com/7Fp35aEuQnSKL2y3mxfApI?s=sw&p=i&ilr=4&amv=0",
 
     secop:
       null
