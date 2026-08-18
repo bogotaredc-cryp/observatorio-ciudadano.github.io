@@ -1161,3 +1161,361 @@ padding:
 
 
 }
+
+.team-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  /* Ocultar scrollbar sin desactivar el scroll */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  padding: 32px;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.25);
+
+  animation: teamModalIn 0.25s ease;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.team-modal::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+/* =========================
+   MODAL EQUIPO
+========================= */
+
+.team-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.team-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 32px;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.25);
+
+  animation: teamModalIn 0.25s ease;
+}
+
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes teamModalIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* =========================
+   BOTÓN CERRAR
+========================= */
+
+.team-modal-close {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f3f3f3;
+
+  color: #333;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.team-modal-close:hover {
+  transform: scale(1.05);
+  background: #e8e8e8;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.team-modal-header {
+  padding-right: 40px;
+
+  margin-bottom: 26px;
+}
+
+
+.team-modal-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 14px;
+
+  background: #f3f4f6;
+
+  font-size: 22px;
+}
+
+
+.team-modal-header h2 {
+  margin: 0 0 8px;
+
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+
+.team-modal-header p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   LISTA DEL EQUIPO
+========================= */
+
+.team-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =========================
+   PERSONA
+========================= */
+
+.team-person {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 16px;
+
+  border: 1px solid #e8e8e8;
+
+  border-radius: 16px;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.team-person:hover {
+  transform: translateY(-2px);
+
+  border-color: #d5d5d5;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================
+   ICONO PERSONA
+========================= */
+
+.team-person-icon {
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #f5f5f5;
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.team-person-info {
+  flex: 1;
+}
+
+
+.team-person-info h3 {
+  margin: 0 0 3px;
+
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+
+.team-person-info span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #555;
+}
+
+
+.team-person-info p {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  color: #777;
+}
+
+
+/* =========================
+   FLECHA
+========================= */
+
+.team-person-arrow {
+  flex-shrink: 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .team-modal-overlay {
+    padding: 16px;
+  }
+
+
+  .team-modal {
+    padding: 24px;
+
+    border-radius: 20px;
+
+    max-height: 92vh;
+  }
+
+
+  .team-modal-header {
+    padding-right: 35px;
+  }
+
+
+  .team-modal-header h2 {
+    font-size: 21px;
+  }
+
+
+  .team-modal-header p {
+    font-size: 13px;
+  }
+
+
+  .team-person {
+    padding: 14px;
+  }
+
+
+  .team-person-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+}
