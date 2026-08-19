@@ -38,44 +38,35 @@ box-sizing:border-box;
 
 
 
-html{
-
-scroll-behavior:smooth;
-
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 
 
-body{
+body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
 
-font-family:
+  font-family: "Segoe UI", sans-serif;
 
-"Segoe UI",
+  background:
+    linear-gradient(
+      180deg,
+      #EAF7EC,
+      #F7FBF8
+    );
 
-sans-serif;
+  color: var(--text);
 
-background:
+  overflow-x: hidden;
 
-linear-gradient(
-
-180deg,
-
-#EAF7EC,
-
-#F7FBF8
-
-);
-
-color:
-
-var(--text);
-
-overflow-x:hidden;
-
-position:relative;
-
+  position: relative;
 }
-
 
 
 /*=====================
@@ -685,14 +676,13 @@ CARDS
 
 
 .card{
-
 background:
 
 var(--card);
 
 padding:
 
-35px;
+25px;
 
 border-radius:
 
@@ -816,7 +806,7 @@ transition:.35s ease;
 
 transform:
 
-scale(1.1)
+scale(1)
 
 rotate(-8deg);
 
@@ -1066,207 +1056,419 @@ RESPONSIVE
 
 ======================*/
 
+/*=====================
+  RESPONSIVE
+======================*/
+
+@media (max-width: 768px) {
+
+  /* =====================
+     SEGURIDAD GENERAL
+  ====================== */
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  video,
+  iframe,
+  svg {
+    max-width: 100%;
+  }
 
 
-@media(max-width:768px){
+  /* =====================
+     HEADER
+  ====================== */
+
+  .topbar {
+    width: 100%;
+    max-width: 100%;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 14px 20px;
+  }
+
+  .logo {
+    max-width: 100%;
+    gap: 8px;
+  }
+
+  .logo-icon {
+    width: 65px;
+    flex-shrink: 0;
+  }
+
+  .logo-icon img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .subtitle {
+    max-width: 100%;
+
+    font-size: .85rem;
+
+    text-align: center;
+
+    overflow-wrap: anywhere;
+  }
 
 
+  /* =====================
+     NAVEGACIÓN
+  ====================== */
 
-.topbar{
+  nav {
+    width: 100%;
+    max-width: 100%;
 
-flex-direction:column;
+    display: flex;
 
-gap:12px;
+    gap: 12px 18px;
 
-padding:
+    flex-wrap: wrap;
 
-15px 20px;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: .88rem;
+
+    white-space: normal;
+
+    text-align: center;
+  }
+
+
+  /* =====================
+     HERO
+  ====================== */
+
+  .hero {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 55px 16px 45px;
+
+    overflow: hidden;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 850px;
+
+    padding: 35px 22px;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+  }
+
+  .hero-badge {
+    max-width: 100%;
+
+    font-size: .82rem;
+
+    padding: 8px 14px;
+
+    overflow-wrap: anywhere;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 20px;
+
+    font-size: 1.9rem;
+
+    line-height: 1.2;
+
+    overflow-wrap: anywhere;
+  }
+
+  .hero p {
+    width: 100%;
+    max-width: 650px;
+
+    margin-top: 16px;
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =====================
+     BOTONES
+  ====================== */
+
+  .hero-buttons {
+    width: 100%;
+    max-width: 100%;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 28px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 14px 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+  }
+
+
+  /* =====================
+     ACCIONES
+  ====================== */
+
+  .acciones {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 30px 16px;
+
+    overflow: hidden;
+  }
+
+  .acciones h2 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 1.7rem;
+
+    margin-bottom: 28px;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =====================
+     GRID
+  ====================== */
+
+  .grid {
+    width: 100%;
+    max-width: 100%;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 16px;
+  }
+
+
+  /* =====================
+     CARDS
+  ====================== */
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 24px 22px;
+
+    border-radius: 23px;
+
+    overflow: hidden;
+  }
+
+  .card h3 {
+    max-width: 100%;
+
+    font-size: 1.25rem;
+
+    overflow-wrap: anywhere;
+  }
+
+  .card p {
+    max-width: 100%;
+
+    font-size: .94rem;
+
+    line-height: 1.55;
+
+    overflow-wrap: anywhere;
+  }
+
+  .icon {
+    width: 58px;
+    height: 58px;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 18px;
+  }
+
+
+  /* =====================
+     BOGOTÁ EN 1 MINUTO
+  ====================== */
+
+  .future-section {
+    width: calc(100% - 32px);
+
+    max-width: 900px;
+
+    margin: 45px auto;
+
+    padding: 32px 22px;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+  }
+
+  .future-section h2 {
+    font-size: 1.7rem;
+
+    overflow-wrap: anywhere;
+  }
+
+  .future-section p {
+    font-size: .95rem;
+
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =====================
+     FOOTER
+  ====================== */
+
+  footer {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 45px;
+
+    padding: 40px 20px;
+
+    overflow: hidden;
+  }
 
 }
 
 
-
-.subtitle{
-
-font-size:
-
-.85rem;
-
-text-align:center;
-
-}
-
-
-
-nav{
-
-gap:18px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-
-
-.hero-content{
-
-padding:
-
-35px 25px;
-
-}
-
-
-
-.hero h1{
-
-font-size:
-
-1.9rem;
-
-}
-
-
-
-.hero p{
-
-font-size:
-
-1rem;
-
-}
-
-
-
-.grid{
-
-grid-template-columns:
-
-1fr;
-
-}
-
-
-
-.future-section{
-
-padding:
-
-35px 25px;
-
-}
-
-
-
-}
-
-.team-modal {
-  position: relative;
-
-  width: 100%;
-  max-width: 520px;
-  max-height: 90vh;
-
-  overflow-y: auto;
-
-  /* Ocultar scrollbar sin desactivar el scroll */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-
-  padding: 32px;
-
-  background: #ffffff;
-
-  border-radius: 24px;
-
-  box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.25);
-
-  animation: teamModalIn 0.25s ease;
-}
-
-
-/* Chrome / Edge / Safari */
-
-.team-modal::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  display: none;
-}
-/* =========================
-   MODAL EQUIPO
-========================= */
+/*=========================================================
+  MODAL EQUIPO
+=========================================================*/
 
 .team-modal-overlay {
+
   position: fixed;
+
   inset: 0;
+
+  width: 100%;
+  height: 100%;
+
   z-index: 9999;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  padding: 24px;
+  padding: 20px;
 
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, .55);
 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 
-/* =========================
-   CONTENEDOR
-========================= */
-
 .team-modal {
+
   position: relative;
 
   width: 100%;
   max-width: 520px;
-  max-height: 90vh;
 
-  overflow-y: auto;
+  min-width: 0;
+
+  max-height: calc(100vh - 40px);
 
   padding: 32px;
 
-  background: #ffffff;
+  background: #fff;
 
   border-radius: 24px;
 
   box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.25);
+    0 25px 70px rgba(0,0,0,.25);
 
-  animation: teamModalIn 0.25s ease;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  animation: teamModalIn .25s ease;
 }
 
 
-/* =========================
-   ANIMACIÓN
-========================= */
+.team-modal::-webkit-scrollbar {
+  display: none;
+}
+
+
+/*=========================================================
+  ANIMACIÓN MODAL
+=========================================================*/
 
 @keyframes teamModalIn {
 
   from {
     opacity: 0;
-    transform: translateY(15px) scale(0.98);
+
+    transform:
+      translateY(15px)
+      scale(.98);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+
+    transform:
+      translateY(0)
+      scale(1);
   }
 
 }
 
 
-/* =========================
-   BOTÓN CERRAR
-========================= */
+/*=========================================================
+  BOTÓN CERRAR
+=========================================================*/
 
 .team-modal-close {
+
   position: absolute;
 
   top: 18px;
@@ -1276,10 +1478,12 @@ padding:
   height: 38px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   border: none;
+
   border-radius: 50%;
 
   background: #f3f3f3;
@@ -1290,32 +1494,41 @@ padding:
 
   cursor: pointer;
 
-  transition: 0.2s ease;
+  transition: .2s ease;
 }
 
 
 .team-modal-close:hover {
+
   transform: scale(1.05);
+
   background: #e8e8e8;
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/*=========================================================
+  HEADER MODAL
+=========================================================*/
 
 .team-modal-header {
-  padding-right: 40px;
+
+  width: 100%;
+
+  min-width: 0;
+
+  padding-right: 45px;
 
   margin-bottom: 26px;
 }
 
 
 .team-modal-icon {
+
   width: 52px;
   height: 52px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -1330,28 +1543,41 @@ padding:
 
 
 .team-modal-header h2 {
+
   margin: 0 0 8px;
 
   font-size: 24px;
+
   line-height: 1.2;
+
+  overflow-wrap: anywhere;
 }
 
 
 .team-modal-header p {
+
   margin: 0;
 
   color: #666;
 
   font-size: 14px;
+
   line-height: 1.5;
+
+  overflow-wrap: anywhere;
 }
 
 
-/* =========================
-   LISTA DEL EQUIPO
-========================= */
+/*=========================================================
+  LISTA
+=========================================================*/
 
 .team-list {
+
+  width: 100%;
+
+  min-width: 0;
+
   display: flex;
 
   flex-direction: column;
@@ -1360,12 +1586,18 @@ padding:
 }
 
 
-/* =========================
-   PERSONA
-========================= */
+/*=========================================================
+  PERSONA
+=========================================================*/
 
 .team-person {
+
+  width: 100%;
+
+  min-width: 0;
+
   display: flex;
+
   align-items: center;
 
   gap: 14px;
@@ -1380,34 +1612,21 @@ padding:
 
   color: inherit;
 
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  overflow: hidden;
+
+  box-sizing: border-box;
 }
 
-
-.team-person:hover {
-  transform: translateY(-2px);
-
-  border-color: #d5d5d5;
-
-  box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.07);
-}
-
-
-/* =========================
-   ICONO PERSONA
-========================= */
 
 .team-person-icon {
-  flex-shrink: 0;
+
+  flex: 0 0 44px;
 
   width: 44px;
   height: 44px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -1419,24 +1638,32 @@ padding:
 }
 
 
-/* =========================
-   INFORMACIÓN
-========================= */
-
 .team-person-info {
-  flex: 1;
+
+  flex: 1 1 auto;
+
+  min-width: 0;
+
+  max-width: 100%;
+
+  overflow: hidden;
 }
 
 
 .team-person-info h3 {
+
   margin: 0 0 3px;
 
   font-size: 15px;
+
   line-height: 1.3;
+
+  overflow-wrap: anywhere;
 }
 
 
 .team-person-info span {
+
   display: block;
 
   margin-bottom: 4px;
@@ -1446,10 +1673,13 @@ padding:
   font-weight: 600;
 
   color: #555;
+
+  overflow-wrap: anywhere;
 }
 
 
 .team-person-info p {
+
   margin: 0;
 
   font-size: 13px;
@@ -1457,65 +1687,246 @@ padding:
   line-height: 1.4;
 
   color: #777;
+
+  overflow-wrap: anywhere;
 }
 
-
-/* =========================
-   FLECHA
-========================= */
 
 .team-person-arrow {
-  flex-shrink: 0;
 
-  color: #777;
+  flex: 0 0 auto;
 
   font-size: 14px;
+
+  color: #777;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/*=========================================================
+  MODAL TABLET
+=========================================================*/
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
   .team-modal-overlay {
     padding: 16px;
   }
 
+  .team-modal {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    max-height: calc(100vh - 32px);
+
+    padding: 28px 22px;
+
+    border-radius: 22px;
+  }
+
+}
+
+
+/*=========================================================
+  MODAL CELULAR
+=========================================================*/
+
+@media (max-width: 480px) {
+
+  .team-modal-overlay {
+
+    width: 100vw;
+
+    max-width: 100vw;
+
+    padding: 10px;
+
+    overflow-x: hidden;
+  }
+
 
   .team-modal {
-    padding: 24px;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    max-height: calc(100vh - 20px);
+
+    padding: 24px 16px;
 
     border-radius: 20px;
 
-    max-height: 92vh;
+    overflow-x: hidden;
+
+    overflow-y: auto;
   }
 
 
-  .team-modal-header {
-    padding-right: 35px;
-  }
+  .team-modal-close {
 
+    top: 13px;
+    right: 13px;
 
-  .team-modal-header h2 {
+    width: 36px;
+    height: 36px;
+
     font-size: 21px;
   }
 
 
+  .team-modal-header {
+
+    padding-right: 42px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .team-modal-icon {
+
+    width: 46px;
+    height: 46px;
+
+    margin-bottom: 14px;
+
+    border-radius: 12px;
+
+    font-size: 19px;
+  }
+
+
+  .team-modal-header h2 {
+
+    font-size: 20px;
+
+    line-height: 1.25;
+  }
+
+
   .team-modal-header p {
+
     font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+
+  .team-list {
+    gap: 10px;
   }
 
 
   .team-person {
-    padding: 14px;
+
+    gap: 9px;
+
+    padding: 12px;
+
+    border-radius: 14px;
   }
 
 
   .team-person-icon {
-    width: 40px;
-    height: 40px;
+
+    flex: 0 0 38px;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+  }
+
+
+  .team-person-info h3 {
+    font-size: 14px;
+  }
+
+
+  .team-person-info span {
+    font-size: 11px;
+  }
+
+
+  .team-person-info p {
+
+    font-size: 12px;
+
+    line-height: 1.4;
+  }
+
+
+  .team-person-arrow {
+    font-size: 11px;
   }
 
 }
+
+
+/*=========================================================
+  CELULARES MUY PEQUEÑOS
+=========================================================*/
+
+@media (max-width: 360px) {
+
+  .team-modal-overlay {
+    padding: 6px;
+  }
+
+
+  .team-modal {
+
+    max-height: calc(100vh - 12px);
+
+    padding: 20px 13px;
+
+    border-radius: 18px;
+  }
+
+
+  .team-modal-header h2 {
+    font-size: 18px;
+  }
+
+
+  .team-person {
+
+    gap: 8px;
+
+    padding: 10px;
+  }
+
+
+  .team-person-icon {
+
+    flex: 0 0 35px;
+
+    width: 35px;
+    height: 35px;
+
+    font-size: 14px;
+  }
+
+
+  .team-person-info h3 {
+    font-size: 13px;
+  }
+
+
+  .team-person-info span,
+  .team-person-info p {
+    font-size: 10.5px;
+  }
+
+
+  .team-person-arrow {
+    display: none;
+  }
+
+}
+
