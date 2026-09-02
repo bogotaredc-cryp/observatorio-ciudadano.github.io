@@ -2,6 +2,29 @@
         REPORTAR UN ANIMAL
 ===================================================== */
 
+:root{
+  --primary:#0B6E4F;
+  --secondary:#1B9C5A;
+  --accent:#A7D129;
+
+  --light:#F7F1FD;
+  --background:#FCFAFF;
+  --card:#FFFFFF;
+
+  --text:#2B2235;
+  --muted:#736A7B;
+
+  --border:#ECE4F7;
+
+  --success:#43AA8B;
+  --danger:#D62839;
+
+  --shadow:
+  0 20px 50px rgba(123,44,191,.10);
+
+  --radius:24px;
+
+}
 .reportar{
 
     padding:120px 8%;
@@ -1387,6 +1410,31 @@ section{
 
 }
 
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F5F1FA;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--secondary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary);
+
+}
 
 
 /* =====================================================

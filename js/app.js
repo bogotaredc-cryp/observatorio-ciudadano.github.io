@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const team = {
 
-    laura: {
+    Carlos : {
       nombre: "Laura Gómez",
       cargo: "Orientación jurídica",
       descripcion: "Apoyo y orientación frente a situaciones legales.",
@@ -14,23 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
       link: "https://forms.gle/AAAA1111"
     },
 
-    andres: {
-      nombre: "Andrés Rodríguez",
-      cargo: "Medio ambiente",
+    Luisa: {
+      nombre: "Luisa Fernanda Giraldo Cano",
+      cargo: "Medio ambiente , Protección animal , Seguridad",
       descripcion: "Orientación sobre situaciones y problemáticas ambientales.",
       icono: "fa-whiteboard fa-semibold fa-at",
       link: "https://forms.gle/BBBB2222"
     },
 
-    camila: {
-      nombre: "Camila Torres",
-      cargo: "Mujeres y equidad",
-      descripcion: "Orientación y acompañamiento para mujeres.",
+    Juan: {
+      nombre: "Juan David Ojeda Lopez",
+      cargo: "Asesor #3",
+      descripcion: "Atencion general",
       icono: "fa-whiteboard fa-semibold fa-at",
       link: "https://forms.gle/CCCC3333"
     },
 
-    daniel: {
+    Omar: {
       nombre: "Daniel Martínez",
       cargo: "Protección animal",
       descripcion: "Orientación frente a situaciones relacionadas con animales.",
