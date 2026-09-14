@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const team = {
 
     Carlos : {
-      nombre: "Laura Gómez",
+      nombre: "Carlos Peña ",
       cargo: "Orientación jurídica",
       descripcion: "Apoyo y orientación frente a situaciones legales.",
       icono: "fa-whiteboard fa-semibold fa-at",
@@ -24,16 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     Juan: {
       nombre: "Juan David Ojeda Lopez",
-      cargo: "Asesor #3",
+      cargo: "Asesor politico",
       descripcion: "Atencion general",
       icono: "fa-whiteboard fa-semibold fa-at",
       link: "https://forms.gle/CCCC3333"
     },
 
     Omar: {
-      nombre: "Daniel Martínez",
-      cargo: "Protección animal",
-      descripcion: "Orientación frente a situaciones relacionadas con animales.",
+      nombre: "Omar Barrera",
+      cargo: "Asesor politico",
+      descripcion: "Atencion General",
       icono: "fa-whiteboard fa-semibold fa-at",
       link: "https://forms.gle/DDDD4444"
     }
