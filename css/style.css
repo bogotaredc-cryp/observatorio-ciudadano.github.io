@@ -884,75 +884,284 @@ font-weight:700;
 
 
 
-/*=====================
+/* =========================================
+   BOGOTÁ EN 1 MINUTO
+========================================= */
 
-BOGOTA EN 1 MINUTO
+.future-section {
+  position: relative;
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 55px 50px;
+  text-align: center;
 
-======================*/
+  background: #ffffff;
+  border: 1px solid rgba(20, 61, 42, 0.08);
+  border-radius: 30px;
 
+  box-shadow: var(--shadow);
 
-
-.future-section{
-
-max-width:900px;
-
-margin:
-
-70px auto;
-
-padding:
-
-50px;
-
-text-align:center;
-
-background:white;
-
-border-radius:
-
-35px;
-
-box-shadow:
-
-var(--shadow);
-
+  overflow: hidden;
 }
 
 
+/* Detalle decorativo superior */
 
-.future-section h2{
+.future-section::before {
+  content: "";
+  position: absolute;
 
-color:
+  top: 0;
+  left: 0;
+  right: 0;
 
-var(--primary);
+  height: 5px;
 
-font-size:
-
-2rem;
-
-margin-bottom:
-
-15px;
-
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    #3c7658,
+    var(--primary)
+  );
 }
 
 
+/* =========================================
+   BADGE
+========================================= */
 
-.future-section p{
+.future-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 
-color:
+  margin-bottom: 20px;
+  padding: 7px 14px;
 
-var(--muted);
+  border-radius: 999px;
 
-font-size:
+  background: rgba(20, 61, 42, 0.07);
 
-1.05rem;
+  color: var(--primary);
 
-line-height:
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
 
-1.7;
+.future-badge span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+}
+
+
+/* =========================================
+   ICONO
+========================================= */
+
+.future-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 20px;
+
+  background: #f1f6f3;
+
+  font-size: 2rem;
+
+  box-shadow: 0 8px 20px rgba(20, 61, 42, 0.08);
+}
+
+
+/* =========================================
+   TITULO
+========================================= */
+
+.future-section h2 {
+  margin: 0 0 14px;
+
+  color: var(--primary);
+
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================================
+   DESCRIPCION
+========================================= */
+
+.future-description {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  color: var(--muted);
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   PREVIEW DE NOTICIA
+========================================= */
+
+.future-preview {
+  max-width: 650px;
+
+  margin: 35px auto 0;
+  padding: 20px;
+
+  text-align: left;
+
+  background: #f8faf9;
+
+  border: 1px solid rgba(20, 61, 42, 0.08);
+  border-radius: 18px;
+}
+
+
+/* Cabecera */
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid rgba(20, 61, 42, 0.08);
+
+  color: var(--primary);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+
+/* Líneas simuladas */
+
+.preview-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  padding: 22px 0;
+}
+
+.preview-lines span {
+  display: block;
+
+  height: 10px;
+
+  border-radius: 10px;
+
+  background: #dfe8e3;
+}
+
+.preview-lines span:first-child {
+  width: 82%;
+  height: 14px;
+}
+
+.preview-lines span:nth-child(2) {
+  width: 94%;
+}
+
+.preview-lines span:nth-child(3) {
+  width: 65%;
+}
+
+
+/* Footer preview */
+
+.preview-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 14px;
+
+  border-top: 1px solid rgba(20, 61, 42, 0.08);
+
+  color: var(--muted);
+
+  font-size: 0.78rem;
+}
+
+
+/* =========================================
+   CARACTERISTICAS
+========================================= */
+
+.future-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 25px;
+
+  margin-top: 28px;
+
+  color: var(--muted);
+
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .future-section {
+    margin: 50px 16px;
+    padding: 40px 22px;
+
+    border-radius: 24px;
+  }
+
+  .future-icon {
+    width: 60px;
+    height: 60px;
+
+    font-size: 1.7rem;
+  }
+
+  .future-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .future-description {
+    font-size: 0.95rem;
+  }
+
+  .future-preview {
+    padding: 16px;
+  }
+
+  .future-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
 
 }
+
 
 
 
